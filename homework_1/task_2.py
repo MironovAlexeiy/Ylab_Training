@@ -3,7 +3,7 @@ from ipaddress import ip_address
 
 def int32_to_ip(int32):
     ip = ip_address(int32)
-    return ip
+    return str(ip)
 
 
 print(int32_to_ip(2149583361))

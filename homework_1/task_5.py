@@ -3,7 +3,7 @@
 primesL = [2, 5]
 limit = 200
 assert count_find_num(primesL, limit) == [8, 200]
-Самое большое число должно быть меньше предела по условию,
+Самое большое число должно быть меньше предела по условию
 """
 from functools import reduce
 from operator import mul
@@ -19,7 +19,7 @@ def count_find_num(primesL, limit):
         for num in primesL:
             for m in result:
                 mult = num * m
-                while mult < limit and mult not in result:
+                while mult <= limit and mult not in result:
                     result.append(mult)
                     mult *= num
         return [len(result), max(result)]
